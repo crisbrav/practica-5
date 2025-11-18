@@ -7,6 +7,7 @@ SOURCES += \
         Box.cpp \
         Obstacle.cpp \
         Particle.cpp \
+        Simulation.cpp \
         Vec2.cpp \
         main.cpp
 
@@ -14,4 +15,5 @@ HEADERS += \
     Box.h \
     Obstacle.h \
     Particle.h \
+    Simulation.h \
     Vec2.h
