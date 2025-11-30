@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     Box.cpp \
+    GameSimulation.cpp \
     Particle.cpp \
     Vec2.cpp \
     main.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     Box.h \
+    GameSimulation.h \
     Particle.h \
     Vec2.h \
     mainwindow.h \
