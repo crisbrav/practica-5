@@ -300,12 +300,6 @@ void GameSimulation::handleProjectileInfraCollisions() {
                                  projectile.velocity.y * projectile.velocity.y);
         double damage = damageFactor * projectile.mass * speed;
 
-        if (currentTurn == PlayerSide::Left) {
-            // Si disparo a mi propia base resto puntos
-            leftScore += (b.owner == PlayerSide::Right) ? damage : -damage;
-        } else {
-            rightScore += (b.owner == PlayerSide::Left) ? damage : -damage;
-        }
 
         b.resistance -= damage;
         if (b.resistance <= 0.0) {
