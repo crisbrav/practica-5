@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <QPixmap>
 #include "GameSimulation.h"
 
 class GameWidget : public QWidget {
@@ -15,11 +16,20 @@ protected:
     void keyPressEvent(QKeyEvent* event) override;
 
 private slots:
-    void onUpdate();
+    void onTick();
 
 private:
     GameSimulation* simulation;
     QTimer timer;
+
+    QPixmap cannonSprite;
+    QPixmap rivalSprite;
+    QPixmap backgroundSprite;
+    void drawRectBlock(QPainter& p, const RectBlock& b,
+                       const QColor& color, bool drawResistance);
+    void drawRival(QPainter& p, const RectBlock& rival);
+    void drawCannon(QPainter& p, const Vec2& pos,
+                    double angleDeg, bool leftSide);
 };
 
 #endif // GAMEWIDGET_H
