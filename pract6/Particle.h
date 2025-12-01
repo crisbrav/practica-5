@@ -12,6 +12,8 @@ public:
     double radius;
     bool active;
 
+    Particle();
+
     Particle(int id_, const Vec2& pos, const Vec2& vel,
              double m, double r);
 
