@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     Box.cpp \
     GameSimulation.cpp \
+    GameWidget.cpp \
     Particle.cpp \
     Vec2.cpp \
     main.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     Box.h \
     GameSimulation.h \
+    GameWidget.h \
     Particle.h \
     Vec2.h \
     mainwindow.h \
@@ -32,3 +34,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc
